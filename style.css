@@ -92,3 +92,9 @@ h2 {
 .btn-success:hover {
     background-color: #D18BA5;
 }
+.visitor-count {
+    font-size: 1.2em;
+    margin: 20px;
+    text-align: center; /* Opcional, centra el texto */
+    color: #333; /* Ajusta el color del texto según el diseño de tu sitio */
+}
