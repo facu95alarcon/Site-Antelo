@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa el contador
-    let visitorCount = localStorage.getItem('visitorCount') || 0;
-    visitorCount++;
-    localStorage.setItem('visitorCount', visitorCount);
-    document.getElementById('visitorCount').textContent = visitorCount;
+    fetch('counter.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('visitorCount').textContent = data;
+        })
+        .catch(error => console.error('Error al obtener el contador de visitas:', error));
 });
